@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--white);
+  background-image: url(./images/bg-pattern-top-mobile.svg),
+    url(/images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+  font-family: "Spartan", sans-serif;
+}
+
+.social-proof {
+  margin: auto;
+  max-width: 350px;
+  text-align: center;
+}
+
+.social-proof__left {
+  padding: 0.25rem;
+}
+
+.social-proof__left > h3 {
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--very-dark-magenta);
+}
+
+.social-proof__left > p {
+  margin: 2rem 0;
+  line-height: 1.6;
+  color: var(--dark-grayish-magenta);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 75px;
+  margin-bottom: 1rem;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 0.5rem;
+}
+
+.review-icons {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  color: var(--very-dark-magenta);
+}
+
+.card {
+  margin: 2rem 0;
+  padding: 2.5rem 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--very-dark-magenta);
+  color: var(--white);
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card-avatar {
+  width: 50px;
+  height: auto;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+}
+
+.card-user {
+  text-align: left;
+}
+
+.card-user > h5 {
+  margin-bottom: 0.3rem;
+}
+
+.card-user > span {
+  font-size: 0.8rem;
+  color: var(--soft-pink);
+}
+
+.card-text {
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  row-gap: 0.3rem;
+  width: auto;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  color: var(--very-dark-magenta);
+}
+
+.footer a:visited {
+  color: var(--soft-pink);
+}
+
+.fa-github {
+  color: var(--soft-pink);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 8px;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+      url(/images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+  }
+
+  .social-proof {
+    padding: 0 0.5rem;
+    max-width: 1000px;
+    text-align: left;
+  }
+
+  .social-proof__upper {
+    display: flex;
+    margin-top: 5rem;
+  }
+
+  .social-proof__left {
+    width: 500px;
+    padding-right: 3rem;
+  }
+
+  .social-proof__left > h3 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .social-proof__left > p {
+    margin-top: 1rem;
+  }
+
+  .social-proof__right {
+    margin-top: 3rem;
+  }
+
+  .review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 25rem;
+    height: 3rem;
+  }
+
+  .review-icons {
+    text-align: left;
+    margin-top: 0.8rem;
+    margin-left: 3rem;
+    margin-right: 5rem;
+  }
+
+  .review-text {
+    text-align: right;
+  }
+
+  .review:nth-child(2) {
+    margin-left: 3rem;
+  }
+
+  .review:nth-child(3) {
+    margin-left: 5rem;
+  }
+
+  .card-wrapper {
+    display: flex;
+    column-gap: 2rem;
+  }
+
+  .card {
+    height: 18rem;
+  }
+
+  .card:nth-child(2) {
+    margin-top: 3rem;
+  }
+
+  .card:nth-child(3) {
+    margin-top: 4rem;
+  }
+}
